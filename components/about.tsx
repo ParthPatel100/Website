@@ -28,7 +28,7 @@ export default function About() {
             id={"about"}
         >
             <SectionHeading>About me</SectionHeading>
-            <div className="grid lg:grid-cols-2 lg:grid-rows-1 sm:grid-cols-1 sm:grid-rows-2 lg:gap-60 sm:gap-1">
+            <div className="grid lg:grid-cols-2 lg:grid-rows-1 grid-cols-1 grid-rows-2 gap-6">
                 <div className="aspect-square object-cover max-w-52 max-h-52 rounded-full mx-auto">
                     <Image src={profilePic} alt="Picture" quality={95} style={imageStyle} width={200} height={200}/>
                 </div>
