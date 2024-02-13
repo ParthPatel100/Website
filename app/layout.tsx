@@ -27,7 +27,7 @@ export default function RootLayout({
       <html lang="en" className="!scroll-smooth">
       <body className={`${inter.className} bg-neutral-50 text-black w-screen`}>
       <div
-          className="bg-gradient-to-r from-teal-100 to-rose-100 h-full w-screen absolute rounded-full -z-10 blur-[100rem] sm:w-screen">
+          className="bg-gradient-to-r from-teal-100 to-rose-100 h-full w-screen absolute rounded-full -z-10 blur-[12rem]">
       </div>
 
       <ActiveSectionContextProvider>
