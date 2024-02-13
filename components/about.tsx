@@ -34,7 +34,7 @@ export default function About() {
                 </div>
 
                 <div>
-                    Hello, I'm under the water, please help me, ahuuuuuuuuuuu
+                    {"Hello, I'm under the water, please help me, ahuuuuuuuuuuu"}
                 </div>
             </div>
 
