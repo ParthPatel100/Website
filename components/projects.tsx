@@ -41,15 +41,14 @@ export default function Projects() {
     return (
         <>
             <SectionHeading> My Projects </SectionHeading>
-            <div className="lg:grid lg:grid-cols-2 max-w-full lg:mx-12 mx-1 lg:my-3 my-2 lg:gap-4"
+            <div className="lg:grid lg:grid-cols-2 max-w-full lg:mx-12 mx-1 lg:my-3 my-2 lg:gap-4 scroll-mt-[12rem]"
+                 id={"projects"}
             ref={ref}>
-
                 {firstList.map((project, index) => (
                     <React.Fragment key={index}>
                         <Project {...project} />
                     </React.Fragment>
                 ))}
-                {/* Render the second list of projects */}
                 {secondList.map((project, index) => (
                     <React.Fragment key={index + firstList.length}>
                         <Project {...project} />
