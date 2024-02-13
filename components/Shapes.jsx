@@ -11,16 +11,17 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export function Shapes() {
     return(
-        <div className="aspect-square">
-            <Canvas className="z-5 "  shadows gl={{antialias:true}} dpr={[1, 1.5]} camera={{position: [0,0,25], fov: 45, near:1, far:40}}>
+        <div className="flex flex-col aspect-square">
+            <Canvas className="z-5 " shadows gl={{antialias: true}} dpr={[1, 1.7]}
+                    camera={{position: [0, 0, 25], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
                     <ContactShadows position={[0, -3.5, 0]}
                                     opacity={0.65}
                                     scale={40}
                                     blur={1}
-                                    far={9} />
-                    <Environment preset= "studio"/>
+                                    far={9}/>
+                    <Environment preset="sunset"/>
                 </Suspense>
             </Canvas>
         </div>
@@ -32,12 +33,12 @@ function Geometries() {
         {
             position: [0, 0, 0],
             r: 0.3,
-            geometry: new THREE.IcosahedronGeometry(3), // Gem
+            geometry: new THREE.IcosahedronGeometry(3.2), // Gem
         },
         {
             position: [1, -0.75, 4],
             r: 0.4,
-            geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
+            geometry: new THREE.CapsuleGeometry(0.5, 1.6, 20, 16), // Pill
         },
         {
             position: [-1.4, 2, -4],
@@ -58,22 +59,35 @@ function Geometries() {
 
 
     const materials = [
-        new THREE.MeshNormalMaterial(),
-        new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0 }),
-        new THREE.MeshStandardMaterial({ color: 0xf1c40f, roughness: 0.4 }),
-        new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
-        new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1 }),
-        new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(184, 80, 66)', roughness: 0 }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(189,190,155)', roughness: 0.4 }),
         new THREE.MeshStandardMaterial({
             roughness: 0,
-            metalness: 0.5,
-            color: 0x2980b9,
+            metalness: 0.4,
+            color: 'rgb(190, 220, 180)',
         }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(200, 162, 200)', roughness: 0.2 }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(169, 156, 143)', roughness: 0.1 }),
         new THREE.MeshStandardMaterial({
-            color: 0x2c3e50,
-            roughness: 0.1,
-            metalness: 0.5,
+            roughness: 0.6,
+            metalness: 0.2,
+            color: 'rgb(145, 169, 197)',
         }),
+        // new THREE.MeshStandardMaterial({
+        //     roughness: 0,
+        //     metalness: 0.5,
+        //     color: 'rgb(60,81,218)',
+        // }),
+        // new THREE.MeshStandardMaterial({
+        //     roughness: 0,
+        //     metalness: 0.5,
+        //     color: 'rgb(60,81,218)',
+        // }),
+        // new THREE.MeshStandardMaterial({
+        //     roughness: 0,
+        //     metalness: 0.5,
+        //     color: 'rgb(60,81,218)',
+        // }),
     ];
 
     return geometries.map(({ position, r, geometry }) => (
