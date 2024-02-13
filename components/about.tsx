@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, {useEffect} from "react";
+import {motion} from "framer-motion";
 import Image from "next/image"
 import profilePic from '../public/images/profile_pic.png'
-import SectionHeading from "@/components/sectionHeading";
+import SectionHeading from "@/components/section-heading";
+import {useInView} from "react-intersection-observer";
+import {useActiveSectionContext} from "@/context/active-section-context";
+import {useSectionInView} from "@/lib/hooks";
 
 const imageStyle = {
     borderRadius: '2rem',
@@ -12,9 +15,12 @@ const imageStyle = {
 }
 
 export default function About() {
+    const { ref } = useSectionInView("About");
+
 
     return (
         <motion.section
+            ref={ref}
             className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-[9rem]"
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}

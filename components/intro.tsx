@@ -1,12 +1,20 @@
 "use client"
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import {motion} from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import {useInView} from "react-intersection-observer";
+
+import {useActiveSectionContext} from "@/context/active-section-context";
+import {useReducerWithReduxDevtools} from "next/dist/client/components/use-reducer-with-devtools";
+import {useSectionInView} from "@/lib/hooks";
 
 
 export default function Intro(){
+    const { ref } = useSectionInView("Home", 0.5);
+
     return(
-        <motion.div className="flex flex-col justify-center font-light text-left leading-none tracking-tighter mt-[5rem]"
+        <motion.div ref={ref}
+                    className="flex flex-col justify-center font-light text-left leading-none tracking-tighter mt-[5rem]"
                     aria-label="Parth Patel"
                     initial={{x: -100, y:"0%", opacity: 0}}
                     animate={{ x:0, y:"0%", opacity:1}}>

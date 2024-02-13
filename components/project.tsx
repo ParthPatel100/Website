@@ -36,13 +36,14 @@ export default function Project({
         >
             <section
                 ref={ref}
-                className=" bg-gradient-to-br from-sky-50 to-fuchsia-50  grid grid-cols-2 grid-rows-5 border border-black/5 overflow-hidden rounded-3xl hover:shadow-2xl w-screen md:grid-rows-3 min-h-72 my-10 mx-4 max-w-[50rem]">
-                <div className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center md:col-span-1">
+                className="bg-gradient-to-br from-stone-100 to-stone-100 grid grid-cols-2 grid-rows-4 border border-black/5 overflow-hidden rounded-3xl hover:shadow-2xl lg:grid-rows-2 my-5 mx-4 h-full w-full">
+                <div
+                    className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center lg:col-span-1">
                     <Image
                         src={""}
                         alt="Project I worked on"
                         quality={95}
-                        width = {100}
+                        width={100}
                         height={100}
                         objectFit="fill"
                         sizes="20px"/>
@@ -50,12 +51,12 @@ export default function Project({
                 </div>
 
                 <div
-                    className="row-start-3 row-span-3 col-start-1 col-span-2 flex flex-col pt-4 pb-7 px-7 sm:pr-2 sm:pt-10 md:col-start-2 md:col-span-1 md:row-start-1 md:row-span-3">
-                    <h3 className="text-2xl font-semibold">{title}</h3>
+                    className="row-start-3 row-span-2 col-start-1 col-span-2 flex flex-col pt-4 pb-7 px-7 sm:pr-2 sm:pt-10 lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-2">
+                    <h3 className="text-2xl font-semibold ">{title}</h3>
                     <p className="mt-[1.8rem] leading-relaxed text-gray-700">
                         {description}
                     </p>
-                    <ul className="flex flex-wrap gap-2 mt-8">
+                    <ul className="flex flex-wrap gap-2 mt-8 ">
                         {tags.map((tag, index) => (
                             <li
                                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
@@ -65,12 +66,16 @@ export default function Project({
                             </li>
                         ))}
                     </ul>
-                    <div className="mt-8 ml-auto mr-5">
-                        <Link href={githubLink} passHref target="_blank">
-                            <FontAwesomeIcon icon={faGithub} size="2x" />
-                        </Link>
+                </div>
 
-                    </div>
+                <div className="row-start-4 row-span-1 col-start-1 col-span-2 mx:auto lg:row-start-2 lg:col-start-2 place-self-end mr-2 mb-3">
+                    {/*<div className="flex content-end items-end">*/}
+                        <Link className="flex content-end items-end" href={githubLink} passHref target="_blank">
+                            <FontAwesomeIcon icon={faGithub} size="2x"/>
+                        </Link>
+                    {/*</div>*/}
+
+
                 </div>
 
             </section>

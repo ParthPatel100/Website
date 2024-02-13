@@ -6,6 +6,8 @@ import { LuGraduationCap } from "react-icons/lu";
 // import rmtdevImg from "@/public/rmtdev.png";
 // import wordanalyticsImg from "@/public/wordanalytics.png";
 import testingPic from "@/public/images/profile_pic.png"
+import { MdWorkOutline } from "react-icons/md";
+
 
 export const links = [
     {
@@ -36,29 +38,24 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        name: "University of Calgary",
+        title: "BSc Computer Science",
+        location: "Calgary, AB",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Currently in my final year at the University of Calgary",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "Sept 2019 - May 2024",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        name: "Cisco",
+        title: "Software Engineer Intern",
+        location: "Calgary, AB",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+            "During my 16-month internship with the Cisco Secure Endpoint data team, I contributed to the development of high-throughput, fault-tolerant data streaming pipelines and scalable data storage solutions.",
+        icon: React.createElement(MdWorkOutline),
+        date: "June 2022 - Oct 2023",
     },
-    {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
-        description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
-    },
+
 ] as const;
 
 export const projectsData = [
@@ -102,7 +99,7 @@ export const projectsData = [
         tags: ["React", "Tailwind", "Typescript", "Three.js"],
         imageUrl: testingPic,
         githubLink: "https://www.sitepoint.com/community/t/white-space-to-the-right-of-a-site-on-mobile-chrome-issue-help/373665"
-    }
+    },
 ] as const;
 
 export const skillsData = [
@@ -115,14 +112,16 @@ export const skillsData = [
     "Node.js",
     "Git",
     "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
-    "PostgreSQL",
     "Python",
-    "Django",
-    "Framer Motion",
+    "Flask",
+    "Java",
+    "Scala",
+    "Akka",
+    "AWS",
+    "Ruby",
+    "Kafka",
+    "Apache Flink",
+    "Chef",
+    "Docker",
+    "RabbitMQ"
 ] as const;
