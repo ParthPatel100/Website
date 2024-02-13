@@ -10,7 +10,7 @@ import {useActiveSectionContext} from "@/context/active-section-context";
 import {useSectionInView} from "@/lib/hooks";
 
 const imageStyle = {
-    borderRadius: '2rem',
+    borderRadius: '100%',
     border: '1px solid #fff'
 }
 
@@ -21,20 +21,20 @@ export default function About() {
     return (
         <motion.section
             ref={ref}
-            className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-[9rem]"
+            className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-[9rem] mt-20 mb-20"
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}
             transition={{delay: 0.175}}
             id={"about"}
         >
             <SectionHeading>About me</SectionHeading>
-            <div className="grid lg:grid-cols-2 lg:grid-rows-1 grid-cols-1 grid-rows-2 gap-6">
-                <div className="aspect-square object-cover max-w-52 max-h-52 rounded-full mx-auto">
-                    <Image src={profilePic} alt="Picture" quality={95} style={imageStyle} width={200} height={200}/>
+            <div className="flex flex-col items-center gap-16 ">
+                <div className="relative flex justify-center items-center max-w-full h-fit">
+                    <Image src={profilePic} alt="Picture" quality={95} style={imageStyle} width={200} height={200} layout="intristic"/>
                 </div>
 
                 <div>
-                    {"Hello, I'm under the water, please help me, ahuuuuuuuuuuu"}
+                    {"Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu Hello, I'm under the water, please help me, ahuuuuuuuuuuu"}
                 </div>
             </div>
 
