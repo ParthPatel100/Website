@@ -32,7 +32,7 @@ export default function Project({
                 scale: scaleProgress,
                 opacity: opacityProgress,
             }}
-            className="mb-3 sm:mb-8 last:mb-0 flex justify-center align-middle content-center items-center"
+            className="mb-3 last:mb-0 flex justify-center align-middle content-center items-center"
         >
             <section
                 ref={ref}
@@ -45,7 +45,6 @@ export default function Project({
                         quality={95}
                         width={100}
                         height={100}
-                        objectFit="fill"
                         sizes="20px"/>
 
                 </div>

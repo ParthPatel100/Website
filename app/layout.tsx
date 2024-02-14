@@ -25,13 +25,14 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-neutral-50 text-black w-screen`}>
+      <body className={`${inter.className} bg-neutral-50 text-black`}>
 
 
       <ActiveSectionContextProvider>
           <Header/>
           {children}
       </ActiveSectionContextProvider>
+
 
 
       </body>

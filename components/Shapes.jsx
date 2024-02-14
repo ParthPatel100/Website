@@ -16,7 +16,7 @@ export function Shapes() {
                     camera={{position: [0, 0, 25], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
-                    <ContactShadows position={[0, -3.5, 0]}
+                    <ContactShadows position={[0, -4.5, 0]}
                                     opacity={0.65}
                                     scale={40}
                                     blur={1}
@@ -32,28 +32,28 @@ function Geometries() {
     const geometries = [
         {
             position: [0, 0, 0],
-            r: 0.3,
-            geometry: new THREE.IcosahedronGeometry(3.2), // Gem
-        },
-        {
-            position: [1, -0.75, 4],
-            r: 0.4,
-            geometry: new THREE.CapsuleGeometry(0.5, 1.6, 20, 16), // Pill
-        },
-        {
-            position: [-1.4, 2, -4],
-            r: 0.6,
-            geometry: new THREE.DodecahedronGeometry(1.5), // Soccer ball
-        },
-        {
-            position: [-0.8, -0.75, 5],
             r: 0.5,
-            geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32), // Donut
+            geometry: new THREE.IcosahedronGeometry(4), // Gem
         },
         {
-            position: [1.6, 1.6, -4],
+            position: [1, -1, 4],
             r: 0.7,
-            geometry: new THREE.OctahedronGeometry(1.5), // Diamond
+            geometry: new THREE.CapsuleGeometry(0.5, 2, 20, 16), // Pill
+        },
+        {
+            position: [-1.4, 2.8, -4],
+            r: 0.6,
+            geometry: new THREE.DodecahedronGeometry(2), // Soccer ball
+        },
+        {
+            position: [-0.8, -0.90, 5],
+            r: 0.6,
+            geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
+        },
+        {
+            position: [1.6, 2.7, -4],
+            r: 0.7,
+            geometry: new THREE.OctahedronGeometry(2), // Diamond
         },
     ];
 
