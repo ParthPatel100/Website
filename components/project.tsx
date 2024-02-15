@@ -19,6 +19,11 @@ export default function Project({
     imageUrl,
     githubLink
     }: ProjectProps){
+    const imageStyle = {
+        borderRadius: '2rem',
+        border: '1px solid',
+        borderColor: "rgb(0 0 0 / 0.05)"
+    }
     const ref = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -38,19 +43,20 @@ export default function Project({
                 ref={ref}
                 className="bg-gradient-to-br from-stone-100 to-stone-100 grid grid-cols-2 grid-rows-4 border border-black/5 overflow-hidden rounded-3xl hover:shadow-2xl lg:grid-rows-2 my-5 mx-4 h-full w-full">
                 <div
-                    className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center lg:col-span-1">
+                    className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center lg:col-span-1 ml-6 mr-4">
                     <Image
-                        src={""}
+                        src={imageUrl}
                         alt="Project I worked on"
                         quality={95}
-                        width={100}
-                        height={100}
-                        sizes="20px"/>
+                        width={300}
+                        height={300}
+                        style={imageStyle}
+                        />
 
                 </div>
 
                 <div
-                    className="row-start-3 row-span-2 col-start-1 col-span-2 flex flex-col pt-4 pb-7 px-7 sm:pr-2 sm:pt-10 lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-2">
+                    className="row-start-3 row-span-2 col-start-1 col-span-2 flex flex-col pt-4 pb-7 px-4 sm:pr-2 sm:pt-10 lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-2">
                     <h3 className="text-2xl font-semibold ">{title}</h3>
                     <p className="mt-[1.8rem] leading-relaxed text-gray-700">
                         {description}

@@ -1,6 +1,7 @@
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
-import testingPic from "@/public/images/profile_pic.png"
+import testingPic from "@/public/images/testing.jpeg"
+import studySparkLogo from "@/public/images/study_spark_logo.png"
 import { MdWorkOutline } from "react-icons/md";
 
 
@@ -58,7 +59,8 @@ export const projectsData = [
     {
         title: "NetFit",
         description:
-            "a web-based fitness app offering simple exercise tracking, progress pictures, and a community for sharing workout inspiration and support",
+            "a web-based fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
+            "and direct access to trainer content, encouraging and guiding users",
         tags: ["React", "MongoDB", "Tailwind", "Javascript", "Node.js"],
         imageUrl: testingPic,
         githubLink: ""
@@ -66,15 +68,18 @@ export const projectsData = [
     {
         title: "Study Spark",
         description:
-            "an AI study tool app to help students summarize notes as well as answer course related queries using intelligent RAG indexing and retrieval",
+            "an AI study tool app to help students summarize notes using Amazon Textract as well as answer course related " +
+            "queries by leveraging the 'thenlper/gte-large' NLP model with an intelligent RAG indexing and retrieval " +
+            "and openai API calls to ChatGPT with refined queries.",
         tags: ["Python", "Flask", "Supabase", "Tailwind", "Svelte"],
-        imageUrl: testingPic,
+        imageUrl: studySparkLogo,
         githubLink: ""
     },
     {
-        title: "Calendar-ify",
+        title: "Calendargram",
         description:
-            "A calendar application with integral data analytics, processing user data from completed tasks, events, and logged physical activities",
+            "A collaborative calendar application with integral data analytics, processing user data from completed tasks, " +
+            "events, and logged physical activities as well as traditional social media features such as post achievements",
         tags: ["Javascript", "React"],
         imageUrl: testingPic,
         githubLink: ""

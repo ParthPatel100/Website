@@ -12,7 +12,6 @@ import {useSectionInView} from "@/lib/hooks";
 const imageStyle = {
     borderRadius: '100%',
     border: '1px solid #fff',
-    layout: 'intristic'
 }
 
 export default function About() {
