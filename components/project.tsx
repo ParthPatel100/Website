@@ -43,7 +43,7 @@ export default function Project({
                 ref={ref}
                 className="bg-gradient-to-br from-stone-100 to-stone-100 grid grid-cols-2 grid-rows-4 border border-black/5 overflow-hidden rounded-3xl hover:shadow-2xl lg:grid-rows-2 my-5 mx-4 h-full w-full">
                 <div
-                    className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center lg:col-span-1 ml-6 mr-4">
+                    className="row-start-1 row-span-2 col-start-1 col-span-2 flex flex-col align-middle justify-center content-center items-center lg:col-span-1 ml-6 mr-4 mt-6">
                     <Image
                         src={imageUrl}
                         alt="Project I worked on"
@@ -73,7 +73,7 @@ export default function Project({
                     </ul>
                 </div>
 
-                <div className="row-start-4 row-span-1 col-start-1 col-span-2 mx:auto lg:row-start-2 lg:col-start-2 place-self-end mr-2 mb-3">
+                <div className="row-start-4 row-span-1 col-start-1 col-span-2 mx:auto lg:row-start-2 lg:col-start-2 place-self-end mr-3 mb-3">
                     {/*<div className="flex content-end items-end">*/}
                         <Link className="flex content-end items-end" href={githubLink} passHref target="_blank">
                             <FontAwesomeIcon icon={faGithub} size="2x"/>

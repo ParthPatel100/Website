@@ -6,6 +6,9 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
+import Skewb from "@/components/Skewb";
+import RubiksCube from "@/components/Skewb";
+import MirrorCube from "@/components/mirrorCube";
 
 
 
@@ -17,9 +20,12 @@ export default function Home() {
             </div>
             <div
                 className="grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 h-screen w-screen items-center
-                align-middle content-center justify-center max-w-full">
+                align-middle content-center max-w-full">
                 <Intro/>
                 <Shapes/>
+
+                {/*<RubiksCube/>*/}
+                {/*<MirrorCube/>*/}
             </div>
             <SectionDivider/>
             <About/>

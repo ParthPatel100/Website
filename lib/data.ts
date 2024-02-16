@@ -1,7 +1,11 @@
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import testingPic from "@/public/images/testing.jpeg"
-import studySparkLogo from "@/public/images/study_spark_logo.png"
+import studySparkLogo from "@/public/images/study_spark_logo_2.png"
+import websiteLogo from "@/public/images/website_logo.png"
+import fairshareLogo from "@/public/images/fairshare_logo_2.png"
+import netfitLogo from "@/public/images/netfit_logo.png"
+import calendargramLogo from "@/public/images/calendargram_logo.png"
 import { MdWorkOutline } from "react-icons/md";
 
 
@@ -62,11 +66,11 @@ export const projectsData = [
             "a web-based fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
             "and direct access to trainer content, encouraging and guiding users",
         tags: ["React", "MongoDB", "Tailwind", "Javascript", "Node.js"],
-        imageUrl: testingPic,
+        imageUrl: netfitLogo,
         githubLink: ""
     },
     {
-        title: "Study Spark",
+        title: "StudySpark",
         description:
             "an AI study tool app to help students summarize notes using Amazon Textract as well as answer course related " +
             "queries by leveraging the 'thenlper/gte-large' NLP model with an intelligent RAG indexing and retrieval " +
@@ -76,20 +80,12 @@ export const projectsData = [
         githubLink: ""
     },
     {
-        title: "Calendargram",
+        title: "CalendarGram",
         description:
             "A collaborative calendar application with integral data analytics, processing user data from completed tasks, " +
             "events, and logged physical activities as well as traditional social media features such as post achievements",
         tags: ["Javascript", "React"],
-        imageUrl: testingPic,
-        githubLink: ""
-    },
-    {
-        title: "Instacart Scraper",
-        description:
-            "Personal side project: A simple cost-splitting application to simplify the equitable sharing of shopping expenses among friends, addressing the common challenge of dividing costs accurately.",
-        tags: ["Scala"],
-        imageUrl: testingPic,
+        imageUrl: calendargramLogo,
         githubLink: ""
     },
     {
@@ -97,9 +93,17 @@ export const projectsData = [
         description:
             "This portfolio website",
         tags: ["React", "Tailwind", "Typescript", "Three.js"],
-        imageUrl: testingPic,
+        imageUrl: websiteLogo,
         githubLink: "https://www.sitepoint.com/community/t/white-space-to-the-right-of-a-site-on-mobile-chrome-issue-help/373665"
     },
+    {
+        title: "FairShare",
+        description:
+            "Personal side project: A simple cost-splitting application to simplify the equitable sharing of shopping expenses among roommates, addressing the common challenge of dividing costs accurately.",
+        tags: ["Scala"],
+        imageUrl: fairshareLogo,
+        githubLink: ""
+    }
 ] as const;
 
 export const skillsData = [

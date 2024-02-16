@@ -2,7 +2,7 @@
 
 import * as THREE from 'three';
 
-import {useEffect, useRef, Suspensem, useState, Suspense} from "react";
+import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
 import { ContactShadows, Float, Environment} from "@react-three/drei";
 import {gsap} from "gsap";
@@ -12,11 +12,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 export function Shapes() {
     return(
         <div className="flex flex-col aspect-square">
-            <Canvas className="z-5 " shadows gl={{antialias: true}} dpr={[1, 1.7]}
-                    camera={{position: [0, 0, 25], fov: 45, near: 1, far: 40}}>
+            <Canvas className="z-5" gl={{antialias: true}} dpr={[1, 1.7]}
+                    camera={{position: [0, 0, 22], fov: 45, near: 1, far: 40}}
+            >
                 <Suspense fallback={null}>
                     <Geometries/>
-                    <ContactShadows position={[0, -4.5, 0]}
+                    <ContactShadows position={[0, -4, 0]}
                                     opacity={0.65}
                                     scale={40}
                                     blur={1}
