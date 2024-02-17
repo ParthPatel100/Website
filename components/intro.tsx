@@ -14,7 +14,7 @@ export default function Intro(){
 
     return(
         <motion.div ref={ref}
-                    className="grid grid-rows-2 justify-center items-center font-light text-left leading-none tracking-tighter w-full"
+                    className="flex flex-col justify-center items-center font-light text-left leading-none tracking-tighter w-full "
                     aria-label="Parth Patel"
                     initial={{x: -100, y:"0%", opacity: 0}}
                     animate={{ x:0, y:"0%", opacity:1}}>

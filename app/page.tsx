@@ -9,6 +9,7 @@ import Experience from "@/components/experience";
 import Skewb from "@/components/Skewb";
 import RubiksCube from "@/components/Skewb";
 import MirrorCube from "@/components/mirrorCube";
+import Contact from "@/components/contact";
 
 
 
@@ -32,6 +33,7 @@ export default function Home() {
             <Projects/>
             <Skills/>
             <Experience/>
+            <Contact/>
 
         </main>
     );
