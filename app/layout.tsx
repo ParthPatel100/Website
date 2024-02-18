@@ -9,6 +9,7 @@ import About from "@/components/about";
 import Link from "next/link";
 import React from "react";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,7 +35,7 @@ export default function RootLayout({
       </ActiveSectionContextProvider>
 
 
-
+      <Analytics/>
       </body>
       </html>
   );
