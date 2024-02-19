@@ -6,9 +6,7 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
-import Skewb from "@/components/Skewb";
-import RubiksCube from "@/components/Skewb";
-import MirrorCube from "@/components/mirrorCube";
+
 import Contact from "@/components/contact";
 
 
@@ -25,8 +23,6 @@ export default function Home() {
                 <Intro/>
                 <Shapes/>
 
-                {/*<RubiksCube/>*/}
-                {/*<MirrorCube/>*/}
             </div>
             <SectionDivider/>
             <About/>

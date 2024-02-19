@@ -12,8 +12,8 @@ import { a } from "@react-spring/three"
 export function Shapes() {
     return(
         <div className="flex flex-col aspect-square ">
-            <Canvas className="z-5 h-full " gl={{antialias: true}} dpr={[1, 2]}
-                    camera={{position: [0, 0, 24], fov: 45, near: 1, far: 40}}
+            <Canvas className="z-5" gl={{antialias: true}} dpr={[1, 2]}
+                    camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}
             >
                 <Suspense fallback={null}>
                     <Geometries/>
@@ -128,7 +128,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
                 y: 0,
                 z: 0,
                 duration: gsap.utils.random(0.8, 1.2),
-                ease: "elastic.out(1,0.3)",
+                ease: "elastic.out(1,0.9)",
                 delay: gsap.utils.random(0, 0.5),
             });
         });

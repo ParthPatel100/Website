@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {Shapes} from "@/components/Shapes";
 import Header from "@/components/header";
-import Intro from "@/components/intro";
-import SectionDivider from "@/components/section-divider";
-import About from "@/components/about";
-import Link from "next/link";
 import React from "react";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Analytics } from '@vercel/analytics/react';

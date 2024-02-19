@@ -15,6 +15,7 @@ function Experience() {
 
     return (
         <section
+            className="scroll-mt-[7rem]"
             ref={ref}
             id="experience">
             <SectionHeading>

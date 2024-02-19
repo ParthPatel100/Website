@@ -1,14 +1,15 @@
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
-import testingPic from "@/public/images/testing.jpeg"
 import studySparkLogo from "@/public/images/study_spark_logo_2.png"
-import websiteLogo from "@/public/images/website_logo.png"
+import websiteLogo from "@/public/images/atom.png"
 import fairshareLogo from "@/public/images/fairshare_logo_2.png"
 import netfitLogo from "@/public/images/netfit_logo.png"
 import calendargramLogo from "@/public/images/calendargram_logo.png"
 import { MdWorkOutline } from "react-icons/md";
 
 
+export const linkedInLink = "https://www.linkedin.com/in/parth-patel-692418211/"
+export const githubLink = "https://github.com/ParthPatel100"
 export const links = [
     {
         name: "Home",

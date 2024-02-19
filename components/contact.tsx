@@ -7,6 +7,13 @@ import { useSectionInView } from "@/lib/hooks";
 import {sendEmail} from "@/server/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast, {Toaster} from "react-hot-toast";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+
+import Link from "next/link";
+import {linkedInLink} from "@/lib/data"
+import {githubLink} from "@/lib/data"
 
 export default function Contact() {
 
@@ -74,6 +81,14 @@ export default function Contact() {
                 />
                 <SubmitBtn />
             </form>
+            <div className="flex flex-row justify-center items-center gap-4">
+                <Link className="flex content-end items-end" href={linkedInLink} passHref target="_blank">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+                </Link>
+                <Link className="flex content-end items-end" href={githubLink} passHref target="_blank">
+                    <FontAwesomeIcon icon={faGithub} size="2x"/>
+                </Link>
+            </div>
         </motion.section>
     );
 }
