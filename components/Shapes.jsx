@@ -6,24 +6,21 @@ import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
 import { ContactShadows, Float, Environment, OrbitControls} from "@react-three/drei";
 import {gsap} from "gsap";
+import { a } from "@react-spring/three"
 
 
 export function Shapes() {
     return(
-        <div className="flex flex-col aspect-square">
-            <Canvas className="z-5 h-full" gl={{antialias: true}} dpr={[1, 1.7]}
-                    camera={{position: [0, 0, 22], fov: 45, near: 1, far: 40}}
+        <div className="flex flex-col aspect-square ">
+            <Canvas className="z-5 h-full " gl={{antialias: true}} dpr={[1, 2]}
+                    camera={{position: [0, 0, 24], fov: 45, near: 1, far: 40}}
             >
                 <Suspense fallback={null}>
                     <Geometries/>
-                    <ContactShadows position={[0, -7, 0]}
-                                    opacity={0.65}
-                                    scale={40}
-                                    blur={1}
-                                    far={9}/>
+
                     <Environment preset="sunset"/>
-                    {/*<OrbitControls enableZoom={false} enablePan={true} enableRotate={tu} />*/}
                 </Suspense>
+                <OrbitControls enableZoom={false} enableDamping={true} enableRotate={true} enablePan={false}/>
             </Canvas>
         </div>
     )
@@ -31,92 +28,53 @@ export function Shapes() {
 
 function Geometries() {
     const geometries = [
-        // {
-        //     position: [0, 0, 0],
-        //     r: 0.5,
-        //     geometry: new THREE.IcosahedronGeometry(4), // Gem
-        // },
-        // {
-        //     position: [1, -1, 3],
-        //     r: 0.7,
-        //     geometry: new THREE.CapsuleGeometry(0.5, 2, 20, 16), // Pill
-        // },
-        // {
-        //     position: [-1.4, 2.8, -2],
-        //     r: 0.6,
-        //     geometry: new THREE.DodecahedronGeometry(2), // Soccer ball
-        // },
-        // {
-        //     position: [-0.8, -0.90, 5],
-        //     r: 0.6,
-        //     geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
-        // },
-        // {
-        //     position: [1.6, 2.7, -4],
-        //     r: 0.7,
-        //     geometry: new THREE.OctahedronGeometry(2), // Diamond
-        // },
-
-
         {
             position: [0, 0, 0],
             r: 0.4,
             geometry: new THREE.IcosahedronGeometry(1.2), // Diamond
         },
-        // {
-        //     position: [0, 0, 0],
-        //     r: 0.6,
-        //     geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
-        // },
         {
             position: [0, 0, 0],
-            r: 0.85,
-            geometry: new THREE.TorusGeometry(3, 0.45, 25, 60), // Donut
+            r: 0.83,
+            geometry: new THREE.TorusGeometry(2.8, 0.4, 30, 100), // Donut
         },
         {
             position: [0, 0, 0],
-            r: 0.94,
-            geometry: new THREE.TorusGeometry(4.5, 0.45, 25, 60), // Donut
+            r: 0.65,
+            geometry: new THREE.TorusGeometry(4.5, 0.4, 30, 100), // Donut
         },
 
         {
             position: [0, 0, 0],
-            r: 0.8,
-            geometry: new THREE.TorusGeometry(6, 0.45, 25, 60), // Donut
+            r: 0.9,
+            geometry: new THREE.TorusGeometry(5.9, 0.4, 30, 100), // Donut
         },
     ];
 
 
     const materials = [
-        new THREE.MeshStandardMaterial({ color: 'rgb(184, 80, 66)', roughness: 0, metalness: 0.2, }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(189,190,155)', roughness: 0.4, metalness: 0.6, }),
+        new THREE.MeshStandardMaterial({
+            color: 'rgb(184, 80, 66)',
+            roughness: 0,
+            metalness: 0.2, }),
+        new THREE.MeshStandardMaterial({
+            color: 'rgb(189,190,155)',
+            roughness: 0.4,
+            metalness: 0.6, }),
         new THREE.MeshStandardMaterial({
             roughness: 0,
             metalness: 0.4,
             color: 'rgb(190, 220, 180)',
         }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(200, 162, 200)', roughness: 0.2, metalness: 1.0, }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(169, 156, 143)', roughness: 0.1, metalness: 0.3,}),
+        new THREE.MeshStandardMaterial({
+            color: 'rgb(200, 162, 200)',
+            roughness: 0.2,
+            metalness: 1.0, }),
         new THREE.MeshStandardMaterial({
             roughness: 0.3,
             metalness: 0.3,
             color: 'rgb(145, 169, 197)',
         }),
-        // new THREE.MeshStandardMaterial({
-        //     roughness: 0,
-        //     metalness: 0.5,
-        //     color: 'rgb(60,81,218)',
-        // }),
-        // new THREE.MeshStandardMaterial({
-        //     roughness: 0,
-        //     metalness: 0.5,
-        //     color: 'rgb(60,81,218)',
-        // }),
-        // new THREE.MeshStandardMaterial({
-        //     roughness: 0,
-        //     metalness: 0.5,
-        //     color: 'rgb(60,81,218)',
-        // }),
     ];
 
     return geometries.map(({ position, r, geometry }) => (
@@ -132,7 +90,6 @@ function Geometries() {
 
 function Geometry({ r, position, geometry, soundEffects, materials }) {
     const meshRef = useRef();
-    const [visible, setVisible] = useState(true);
 
     const startingMaterial = getRandomMaterial();
 
@@ -166,7 +123,6 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
 
     useEffect(() => {
         let ctx = gsap.context(() => {
-            setVisible(true);
             gsap.from(meshRef.current.scale, {
                 x: 0,
                 y: 0,
@@ -181,15 +137,14 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
 
     return (
         <group position={position} ref={meshRef}>
-            <Float speed={5 * r} rotationIntensity={10 * r} floatIntensity={5 * r}>
-                <mesh
+            <Float speed={5 * r} rotationIntensity={10 * r} >
+                <a.mesh
                     geometry={geometry}
                     onClick={handleClick}
                     onPointerOver={handlePointerOver}
                     onPointerOut={handlePointerOut}
-                    visible={visible}
                     material={startingMaterial}
-                ></mesh>
+                ></a.mesh>
             </Float>
         </group>
     );
