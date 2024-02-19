@@ -4,25 +4,25 @@ import * as THREE from 'three';
 
 import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
-import { ContactShadows, Float, Environment} from "@react-three/drei";
+import { ContactShadows, Float, Environment, OrbitControls} from "@react-three/drei";
 import {gsap} from "gsap";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 
 export function Shapes() {
     return(
         <div className="flex flex-col aspect-square">
-            <Canvas className="z-5" gl={{antialias: true}} dpr={[1, 1.7]}
+            <Canvas className="z-5 h-full" gl={{antialias: true}} dpr={[1, 1.7]}
                     camera={{position: [0, 0, 22], fov: 45, near: 1, far: 40}}
             >
                 <Suspense fallback={null}>
                     <Geometries/>
-                    <ContactShadows position={[0, -4, 0]}
+                    <ContactShadows position={[0, -7, 0]}
                                     opacity={0.65}
                                     scale={40}
                                     blur={1}
                                     far={9}/>
                     <Environment preset="sunset"/>
+                    {/*<OrbitControls enableZoom={false} enablePan={true} enableRotate={tu} />*/}
                 </Suspense>
             </Canvas>
         </div>
@@ -31,47 +31,75 @@ export function Shapes() {
 
 function Geometries() {
     const geometries = [
+        // {
+        //     position: [0, 0, 0],
+        //     r: 0.5,
+        //     geometry: new THREE.IcosahedronGeometry(4), // Gem
+        // },
+        // {
+        //     position: [1, -1, 3],
+        //     r: 0.7,
+        //     geometry: new THREE.CapsuleGeometry(0.5, 2, 20, 16), // Pill
+        // },
+        // {
+        //     position: [-1.4, 2.8, -2],
+        //     r: 0.6,
+        //     geometry: new THREE.DodecahedronGeometry(2), // Soccer ball
+        // },
+        // {
+        //     position: [-0.8, -0.90, 5],
+        //     r: 0.6,
+        //     geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
+        // },
+        // {
+        //     position: [1.6, 2.7, -4],
+        //     r: 0.7,
+        //     geometry: new THREE.OctahedronGeometry(2), // Diamond
+        // },
+
+
         {
             position: [0, 0, 0],
-            r: 0.5,
-            geometry: new THREE.IcosahedronGeometry(4), // Gem
+            r: 0.4,
+            geometry: new THREE.IcosahedronGeometry(1.2), // Diamond
+        },
+        // {
+        //     position: [0, 0, 0],
+        //     r: 0.6,
+        //     geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
+        // },
+        {
+            position: [0, 0, 0],
+            r: 0.85,
+            geometry: new THREE.TorusGeometry(3, 0.45, 25, 60), // Donut
         },
         {
-            position: [1, -1, 4],
-            r: 0.7,
-            geometry: new THREE.CapsuleGeometry(0.5, 2, 20, 16), // Pill
+            position: [0, 0, 0],
+            r: 0.94,
+            geometry: new THREE.TorusGeometry(4.5, 0.45, 25, 60), // Donut
         },
+
         {
-            position: [-1.4, 2.8, -4],
-            r: 0.6,
-            geometry: new THREE.DodecahedronGeometry(2), // Soccer ball
-        },
-        {
-            position: [-0.8, -0.90, 5],
-            r: 0.6,
-            geometry: new THREE.TorusGeometry(0.7, 0.3, 18, 36), // Donut
-        },
-        {
-            position: [1.6, 2.7, -4],
-            r: 0.7,
-            geometry: new THREE.OctahedronGeometry(2), // Diamond
+            position: [0, 0, 0],
+            r: 0.8,
+            geometry: new THREE.TorusGeometry(6, 0.45, 25, 60), // Donut
         },
     ];
 
 
     const materials = [
-        new THREE.MeshStandardMaterial({ color: 'rgb(184, 80, 66)', roughness: 0 }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(189,190,155)', roughness: 0.4 }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(184, 80, 66)', roughness: 0, metalness: 0.2, }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(189,190,155)', roughness: 0.4, metalness: 0.6, }),
         new THREE.MeshStandardMaterial({
             roughness: 0,
             metalness: 0.4,
             color: 'rgb(190, 220, 180)',
         }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(200, 162, 200)', roughness: 0.2 }),
-        new THREE.MeshStandardMaterial({ color: 'rgb(169, 156, 143)', roughness: 0.1 }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(200, 162, 200)', roughness: 0.2, metalness: 1.0, }),
+        new THREE.MeshStandardMaterial({ color: 'rgb(169, 156, 143)', roughness: 0.1, metalness: 0.3,}),
         new THREE.MeshStandardMaterial({
-            roughness: 0.6,
-            metalness: 0.2,
+            roughness: 0.3,
+            metalness: 0.3,
             color: 'rgb(145, 169, 197)',
         }),
         // new THREE.MeshStandardMaterial({
@@ -153,7 +181,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
 
     return (
         <group position={position} ref={meshRef}>
-            <Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
+            <Float speed={5 * r} rotationIntensity={10 * r} floatIntensity={5 * r}>
                 <mesh
                     geometry={geometry}
                     onClick={handleClick}

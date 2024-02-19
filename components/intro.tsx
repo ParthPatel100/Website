@@ -2,10 +2,6 @@
 import React, {useEffect, useRef} from 'react'
 import {motion} from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import {useInView} from "react-intersection-observer";
-
-import {useActiveSectionContext} from "@/context/active-section-context";
-import {useReducerWithReduxDevtools} from "next/dist/client/components/use-reducer-with-devtools";
 import {useSectionInView} from "@/lib/hooks";
 
 

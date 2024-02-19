@@ -91,7 +91,7 @@ export const projectsData = [
     {
         title: "This Website",
         description:
-            "This portfolio website",
+            "Built this website using React, Tailwind and Typescript and used Three.js to create interactive 3D geometries on the homepage",
         tags: ["React", "Tailwind", "Typescript", "Three.js"],
         imageUrl: websiteLogo,
         githubLink: "https://www.sitepoint.com/community/t/white-space-to-the-right-of-a-site-on-mobile-chrome-issue-help/373665"
