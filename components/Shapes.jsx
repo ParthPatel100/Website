@@ -7,7 +7,7 @@ import { Canvas } from '@react-three/fiber'
 import {
     Float,
     Environment,
-    TrackballControls, OrbitControls,
+    TrackballControls, OrbitControls, ContactShadows,
 } from "@react-three/drei";
 import {gsap} from "gsap";
 import { a } from "@react-spring/three"
@@ -17,15 +17,14 @@ export function Shapes() {
     const [dpr, setDpr] = useState(1.5)
 
     return(
-        <div className="flex flex-col aspect-square ">
+        <div className="flex flex-col aspect-square mx-8">
             <Canvas className="z-5 w-full" gl={{antialias: true}} dpr={dpr}
-                    camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}>
+                    camera={{position: [0, 0, 15], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
                     <Environment preset="sunset"/>
                 </Suspense>
                 <TrackballControls noZoom={true} noPan={true} rotateSpeed={2}/>
-
             </Canvas>
         </div>
     )
@@ -43,17 +42,17 @@ function Geometries() {
         {
             position: [0, 0, 0],
             r: 0.74,
-            geometry: new THREE.TorusGeometry(2.4, 0.4, 30, 100), // Donut
+            geometry: new THREE.TorusGeometry(1.8, 0.4, 30, 100), // Donut
         },
         {
             position: [0, 0, 0],
             r: 0.65,
-            geometry: new THREE.TorusGeometry(4.1, 0.4, 30, 100), // Donut
+            geometry: new THREE.TorusGeometry(3.4, 0.4, 30, 100), // Donut
         },
         {
             position: [0, 0, 0],
             r: 0.8,
-            geometry: new THREE.TorusGeometry(5.5, 0.4, 30, 100), // Donut
+            geometry: new THREE.TorusGeometry(4.8, 0.4, 30, 100), // Donut
         },
     ];
 

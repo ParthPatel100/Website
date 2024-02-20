@@ -14,7 +14,7 @@ export default function Intro(){
                     aria-label="Parth Patel"
                     initial={{x: -100, y:"0%", opacity: 0}}
                     animate={{ x:0, y:"0%", opacity:1}}>
-            <h1 className="text-[6rem] text-center"> Parth Patel</h1>
+            <h1 className="text-[7rem] text-center"> Parth Patel</h1>
                 <div className="text-[1.4rem] font-extralight mx-auto place-self-start">
                     <TypeAnimation
                         sequence={[
