@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
-import { ContactShadows, Float, Environment, OrbitControls} from "@react-three/drei";
+import { ContactShadows, Float, Environment, OrbitControls, TrackballControls} from "@react-three/drei";
 import {gsap} from "gsap";
 import { a } from "@react-spring/three"
 
@@ -13,14 +13,12 @@ export function Shapes() {
     return(
         <div className="flex flex-col aspect-square ">
             <Canvas className="z-5" gl={{antialias: true}} dpr={[1, 2]}
-                    camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}
-            >
+                    camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
-
                     <Environment preset="sunset"/>
                 </Suspense>
-                <OrbitControls enableZoom={false} enableDamping={true} enableRotate={true} enablePan={false}/>
+                <TrackballControls noZoom={true} noPan={true} rotateSpeed={1.4}/>
             </Canvas>
         </div>
     )
@@ -31,23 +29,22 @@ function Geometries() {
         {
             position: [0, 0, 0],
             r: 0.4,
-            geometry: new THREE.IcosahedronGeometry(1.2), // Diamond
+            geometry: new THREE.IcosahedronGeometry(1.1), // Diamond
         },
         {
             position: [0, 0, 0],
-            r: 0.83,
-            geometry: new THREE.TorusGeometry(2.8, 0.4, 30, 100), // Donut
+            r: 0.74,
+            geometry: new THREE.TorusGeometry(2.4, 0.4, 30, 100), // Donut
         },
         {
             position: [0, 0, 0],
             r: 0.65,
-            geometry: new THREE.TorusGeometry(4.5, 0.4, 30, 100), // Donut
+            geometry: new THREE.TorusGeometry(4.1, 0.4, 30, 100), // Donut
         },
-
         {
             position: [0, 0, 0],
-            r: 0.9,
-            geometry: new THREE.TorusGeometry(5.9, 0.4, 30, 100), // Donut
+            r: 0.8,
+            geometry: new THREE.TorusGeometry(5.5, 0.4, 30, 100), // Donut
         },
     ];
 
