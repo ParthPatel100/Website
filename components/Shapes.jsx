@@ -4,21 +4,31 @@ import * as THREE from 'three';
 
 import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
-import { ContactShadows, Float, Environment, OrbitControls, TrackballControls} from "@react-three/drei";
+import {
+    ContactShadows,
+    Float,
+    Environment,
+    OrbitControls,
+    TrackballControls,
+    PerformanceMonitor
+} from "@react-three/drei";
 import {gsap} from "gsap";
 import { a } from "@react-spring/three"
 
 
 export function Shapes() {
+    const [dpr, setDpr] = useState(1.5)
+
     return(
         <div className="flex flex-col aspect-square ">
-            <Canvas className="z-5" gl={{antialias: true}} dpr={[1, 2]}
+            <Canvas className="z-5" gl={{antialias: true}} dpr={dpr}
                     camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
                     <Environment preset="sunset"/>
                 </Suspense>
                 <TrackballControls noZoom={true} noPan={true} rotateSpeed={2}/>
+                <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)}/>
             </Canvas>
         </div>
     )
@@ -94,9 +104,16 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
         return gsap.utils.random(materials);
     }
 
+    function handleTouchStart(event) {
+        // Prevent default touch event behavior to avoid issues with mobile browsers
+        event.preventDefault();
+
+        // Call the same function as handleClick
+        handleClick();
+    }
+
     function handleClick(e) {
         const mesh = e.object;
-
 
         gsap.to(mesh.rotation, {
             x: `+=${gsap.utils.random(0, 2)}`,
@@ -140,6 +157,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
                     onClick={handleClick}
                     onPointerOver={handlePointerOver}
                     onPointerOut={handlePointerOut}
+                    onTouchStart={handleTouchStart}
                     material={startingMaterial}
                 ></a.mesh>
             </Float>
