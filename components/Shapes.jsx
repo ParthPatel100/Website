@@ -5,12 +5,9 @@ import * as THREE from 'three';
 import {useEffect, useRef, useState, Suspense} from "react";
 import { Canvas } from '@react-three/fiber'
 import {
-    ContactShadows,
     Float,
     Environment,
-    OrbitControls,
-    TrackballControls,
-    PerformanceMonitor
+    TrackballControls, OrbitControls,
 } from "@react-three/drei";
 import {gsap} from "gsap";
 import { a } from "@react-spring/three"
@@ -21,18 +18,20 @@ export function Shapes() {
 
     return(
         <div className="flex flex-col aspect-square ">
-            <Canvas className="z-5" gl={{antialias: true}} dpr={dpr}
+            <Canvas className="z-5 w-full" gl={{antialias: true}} dpr={dpr}
                     camera={{position: [0, 0, 19], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
                     <Environment preset="sunset"/>
                 </Suspense>
                 <TrackballControls noZoom={true} noPan={true} rotateSpeed={2}/>
-                <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)}/>
+
             </Canvas>
         </div>
     )
 }
+
+let uniqueKey = 0
 
 function Geometries() {
     const geometries = [
@@ -86,7 +85,7 @@ function Geometries() {
 
     return geometries.map(({ position, r, geometry }) => (
         <Geometry
-            key={JSON.stringify(position)} // Unique key
+            key={JSON.stringify(uniqueKey++)} // Unique key
             position={position.map((p) => p * 2)}
             geometry={geometry}
             materials={materials}
@@ -102,14 +101,6 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
 
     function getRandomMaterial() {
         return gsap.utils.random(materials);
-    }
-
-    function handleTouchStart(event) {
-        // Prevent default touch event behavior to avoid issues with mobile browsers
-        event.preventDefault();
-
-        // Call the same function as handleClick
-        handleClick();
     }
 
     function handleClick(e) {
@@ -154,10 +145,9 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
             <Float speed={5 * r} rotationIntensity={10 * r} >
                 <a.mesh
                     geometry={geometry}
-                    onClick={handleClick}
+                    onPointerDown={handleClick}
                     onPointerOver={handlePointerOver}
                     onPointerOut={handlePointerOut}
-                    onTouchStart={handleTouchStart}
                     material={startingMaterial}
                 ></a.mesh>
             </Float>
