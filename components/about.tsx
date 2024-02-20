@@ -35,7 +35,7 @@ export default function About() {
 
                 <div className="text-left flex flex-col gap-4">
                     <p className="text-left">
-                        Hey there! I'm <span className="font-bold">Parth Patel</span>, a passionate developer graduating
+                        {`Hey there! I'm <span className="font-bold">Parth Patel</span>, a passionate developer graduating
                         from the<span className="font-bold"> University of Calgary </span>
                         in <span className="font-bold"> May 2024. </span>
                         With a strong foundation in <span className="font-bold"> Computer Science </span> and a knack
@@ -66,7 +66,7 @@ export default function About() {
 
                         <br/>
                         <br/>
-                        Let's connect and build some awesome stuff together!
+                        Let's connect and build some awesome stuff together!`}
                     </p>
 
                 </div>
