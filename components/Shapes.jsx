@@ -18,7 +18,7 @@ export function Shapes() {
                     <Geometries/>
                     <Environment preset="sunset"/>
                 </Suspense>
-                <TrackballControls noZoom={true} noPan={true} rotateSpeed={1.4}/>
+                <TrackballControls noZoom={true} noPan={true} rotateSpeed={2}/>
             </Canvas>
         </div>
     )

@@ -64,21 +64,21 @@ export const projectsData = [
     {
         title: "NetFit",
         description:
-            "a web-based fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
+            "(In progress) a web-based fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
             "and direct access to trainer content, encouraging and guiding users",
         tags: ["React", "MongoDB", "Tailwind", "Javascript", "Node.js"],
         imageUrl: netfitLogo,
-        githubLink: ""
+        githubLink: "https://csgit.ucalgary.ca/parth.patel1/seng513-202401-group-10"
     },
     {
         title: "StudySpark",
         description:
-            "an AI study tool app to help students summarize notes using Amazon Textract as well as answer course related " +
+            "(In Progress) an AI study tool app to help students summarize notes using Amazon Textract as well as answer course related " +
             "queries by leveraging the 'thenlper/gte-large' NLP model with an intelligent RAG indexing and retrieval " +
             "and openai API calls to ChatGPT with refined queries.",
         tags: ["Python", "Flask", "Supabase", "Tailwind", "Svelte"],
         imageUrl: studySparkLogo,
-        githubLink: ""
+        githubLink: "https://github.com/ParthPatel100/study-spark-ai"
     },
     {
         title: "CalendarGram",
@@ -87,7 +87,7 @@ export const projectsData = [
             "events, and logged physical activities as well as traditional social media features such as post achievements",
         tags: ["Javascript", "React"],
         imageUrl: calendargramLogo,
-        githubLink: ""
+        githubLink: "https://github.com/ParthPatel100/Social-media-Project"
     },
     {
         title: "This Website",
@@ -95,7 +95,7 @@ export const projectsData = [
             "Built this website using React, Tailwind and Typescript and used Three.js to create interactive 3D geometries on the homepage",
         tags: ["React", "Tailwind", "Typescript", "Three.js"],
         imageUrl: websiteLogo,
-        githubLink: "https://www.sitepoint.com/community/t/white-space-to-the-right-of-a-site-on-mobile-chrome-issue-help/373665"
+        githubLink: "https://github.com/ParthPatel100/Website"
     },
     {
         title: "FairShare",
@@ -103,7 +103,7 @@ export const projectsData = [
             "Personal side project: A simple cost-splitting application to simplify the equitable sharing of shopping expenses among roommates, addressing the common challenge of dividing costs accurately.",
         tags: ["Scala"],
         imageUrl: fairshareLogo,
-        githubLink: ""
+        githubLink: "https://github.com/ParthPatel100/FairShare"
     }
 ] as const;
 
