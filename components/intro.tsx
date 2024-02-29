@@ -10,7 +10,7 @@ export default function Intro(){
 
     return(
         <motion.div ref={ref}
-                    className="flex flex-col justify-center items-center font-light text-left leading-none tracking-tighter w-full "
+                    className="flex flex-col justify-center items-center font-light text-left leading-none tracking-tighter w-full mt-16 sm:mt-0"
                     aria-label="Parth Patel"
                     initial={{x: -100, y:"0%", opacity: 0}}
                     animate={{ x:0, y:"0%", opacity:1}}>
