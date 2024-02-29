@@ -12,13 +12,18 @@ import {
 import {gsap} from "gsap";
 import { a } from "@react-spring/three"
 
-
 export function Shapes() {
     // const [dpr, setDpr] = useState(1.5)
 
+    let devicePixelRatio = 1; // Default value
+
+    if (typeof window !== 'undefined') {
+        devicePixelRatio = window.devicePixelRatio;
+    }
+
     return(
         <div className="flex flex-col aspect-square mx-8">
-            <Canvas className="z-5 w-full" gl={{antialias: true}} dpr={3}
+            <Canvas className="z-5 w-full" gl={{antialias: true}} dpr={devicePixelRatio}
                     camera={{position: [0, 0, 15], fov: 45, near: 1, far: 40}}>
                 <Suspense fallback={null}>
                     <Geometries/>
