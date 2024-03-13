@@ -14,7 +14,7 @@ export default function Projects() {
     return (
         <>
             <SectionHeading> My Projects </SectionHeading>
-            <div className=" lg:grid lg:grid-cols-2 xl:max-w-[100rem] lg:mx-12 mx-1 lg:my-3 my-2 lg:gap-4 scroll-mt-[12rem] md:mx-16 max-w-full"
+            <div className=" lg:grid lg:grid-cols-2 xl:max-w-[100rem] lg:mx-12 mx-1 lg:my-3 my-2 lg:gap-6 scroll-mt-[12rem] md:mx-16 max-w-full flex flex-col gap-12"
                  id={"projects"}
             ref={ref}>
                 {firstList.map((project, index) => (

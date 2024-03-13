@@ -11,7 +11,7 @@ import {useSectionInView} from "@/lib/hooks";
 
 const imageStyle = {
     borderRadius: '100%',
-    border: '1px solid #fff',
+    border: '1px solid #000000',
 }
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
             <SectionHeading>About me</SectionHeading>
             <div className="flex flex-col items-center gap-16 ">
                 <div className="relative flex justify-center items-center max-w-full h-fit">
-                    <Image src={profilePic} alt="Picture" quality={95} style={imageStyle} width={250} height={250} />
+                    <Image src={profilePic} alt="Picture" quality={95} style={imageStyle} width={275} height={275} />
                 </div>
 
                 <div className="text-left flex flex-col gap-4">
