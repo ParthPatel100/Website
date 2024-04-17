@@ -7,7 +7,7 @@ import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-    const { ref } = useSectionInView("Projects", 0.2);
+    const { ref } = useSectionInView("Projects", 0.1);
     const firstList = projectsData.filter((project, index) => index % 2 === 0);
     const secondList = projectsData.filter((project, index) => index % 2 !== 0);
 

@@ -5,6 +5,9 @@ import websiteLogo from "@/public/images/atom.png"
 import fairshareLogo from "@/public/images/fairshare_logo_2.png"
 import netfitLogo from "@/public/images/netfit_logo.png"
 import calendargramLogo from "@/public/images/calendargram_logo.png"
+import snugStayLogo from "@/public/images/snugStaySystems_logo.png"
+import picamyLogo from "@/public/images/picamy_logo.png"
+
 import { MdWorkOutline } from "react-icons/md";
 
 
@@ -64,11 +67,19 @@ export const projectsData = [
     {
         title: "NetFit",
         description:
-            "(In progress) a web-based fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
+            "a social-media fitness app offering simple exercise tracking, progress pictures, a community for sharing workout inspiration and support " +
             "and direct access to trainer content, encouraging and guiding users",
         tags: ["React", "MongoDB", "Tailwind", "Javascript", "Node.js"],
         imageUrl: netfitLogo,
-        githubLink: "https://csgit.ucalgary.ca/parth.patel1/seng513-202401-group-10"
+        githubLink: "https://github.com/ParthPatel100/NetFit"
+    },
+    {
+        title: "FairShare",
+        description:
+            "Personal side project: A simple cost-splitting application to simplify the equitable sharing of shopping expenses among roommates, addressing the common challenge of dividing costs accurately.",
+        tags: ["Scala"],
+        imageUrl: fairshareLogo,
+        githubLink: "https://github.com/ParthPatel100/FairShare"
     },
     {
         title: "StudySpark",
@@ -90,6 +101,15 @@ export const projectsData = [
         githubLink: "https://github.com/ParthPatel100/Social-media-Project"
     },
     {
+        title: "SnugStay Systems",
+        description:
+            "A smart thermostat system for a hotel mainly focusing on distributed systems replication, communication, fault tolerance, data synchronization and consistency using DS algorithms dealing with Leader Election (Bully Algorithm), Critical Section - Leader based algorithm and Eventual Consistency model.",
+        tags: ["Java", "Spring", "React", "Kafka"],
+        imageUrl: snugStayLogo,
+        githubLink: "https://github.com/jayzk/Smart-Thermostat-System"
+    },
+
+    {
         title: "This Website",
         description:
             "Built this website using React, Tailwind and Typescript and used Three.js to create interactive 3D geometries on the homepage",
@@ -98,13 +118,14 @@ export const projectsData = [
         githubLink: "https://github.com/ParthPatel100/Website"
     },
     {
-        title: "FairShare",
+        title: "Picamy",
         description:
-            "Personal side project: A simple cost-splitting application to simplify the equitable sharing of shopping expenses among roommates, addressing the common challenge of dividing costs accurately.",
-        tags: ["Scala"],
-        imageUrl: fairshareLogo,
-        githubLink: "https://github.com/ParthPatel100/FairShare"
-    }
+            "A simple photo library management application to handle the traditional image uploading, storing, deleting, sorting, and tagging with a unique marketplace for images, where users can buy and sell images.",
+        tags: ["React", "Tailwind", "NodeJS"],
+        imageUrl: picamyLogo,
+        githubLink: "https://github.com/jayzk/Smart-Thermostat-System"
+    },
+
 ] as const;
 
 export const skillsData = [

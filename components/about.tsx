@@ -15,7 +15,7 @@ const imageStyle = {
 }
 
 export default function About() {
-    const { ref } = useSectionInView("About");
+    const { ref } = useSectionInView("About", 0.4);
 
 
     return (

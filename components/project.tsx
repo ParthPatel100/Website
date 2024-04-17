@@ -34,17 +34,21 @@ export default function Project({
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
     return (
 
+
         <motion.div
             style={{
                 scale: scaleProgress,
             }}
-            className="">
+            className=""
+        >
+            <Link href={githubLink} passHref target="_blank">
+
             <section
                 ref={ref}
                 className="flex w-full h-full">
                 <CardContainer className="mb-3 last:mb-0 h-full items-center">
                     <CardBody
-                        className="bg-stone-100 grid grid-cols-2 grid-rows-4 border border-black/5 rounded-3xl hover:shadow-2xl lg:grid-rows-2 my-5 mx-4 h-full w-full justify-center content-center align-middle items-center">
+                        className="bg-stone-100 grid grid-cols-2 grid-rows-4 border border-slate-200 rounded-3xl hover:shadow-2xl lg:grid-rows-2 my-5 mx-4 h-full w-full justify-center content-center align-middle items-center">
 
                         <CardItem
                             translateZ="100"
@@ -89,6 +93,7 @@ export default function Project({
                     </CardBody>
                 </CardContainer>
             </section>
+            </Link>
         </motion.div>
     )
 }
