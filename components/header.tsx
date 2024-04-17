@@ -42,7 +42,7 @@ export default function Header() {
 
                                     {link.name === activeSection && (
                                         <span
-                                            className="bg-slate-300 rounded-full absolute inset-0 -z-10 "
+                                            className="bg-gradient-to-br from-sky-100 to-pink-100 rounded-full absolute inset-0 -z-10 "
                                         ></span>)}
 
                                 </Link>
