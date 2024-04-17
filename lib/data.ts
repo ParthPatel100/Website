@@ -123,7 +123,7 @@ export const projectsData = [
             "A simple photo library management application to handle the traditional image uploading, storing, deleting, sorting, and tagging with a unique marketplace for images, where users can buy and sell images.",
         tags: ["React", "Tailwind", "NodeJS"],
         imageUrl: picamyLogo,
-        githubLink: "https://github.com/jayzk/Smart-Thermostat-System"
+        githubLink: "https://github.com/sukh-lgtm/ProjectHCI"
     },
 
 ] as const;
