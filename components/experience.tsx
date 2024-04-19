@@ -9,6 +9,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import {experiencesData} from "@/lib/data";
 import {useSectionInView} from "@/lib/hooks";
+import Image from "next/image";
 
 function Experience() {
     const { ref } = useSectionInView("Experience");
@@ -42,9 +43,17 @@ function Experience() {
                                     background: "white"
                                 }}
                             >
-                                <h2 className="font-bold"> {item.name}</h2>
-                                <h3> {item.title}</h3>
-                                <div className="text-gray-400"> {item.location}</div>
+                                <div className={"flex flex-row items-center gap-2"}>
+                                    <Image src={item.logo} alt={"Logo"} width={70}/>
+                                    <div className={"flex flex-col"}>
+                                        <h2 className="font-bold"> {item.name}</h2>
+                                        <h3> {item.title}</h3>
+                                        <div className="text-gray-400"> {item.location}</div>
+                                    </div>
+
+                                </div>
+
+
                                 <p> {item.description}</p>
                             </VerticalTimelineElement>
                         </React.Fragment>

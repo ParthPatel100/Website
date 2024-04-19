@@ -34,7 +34,6 @@ export default function Project({
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
     return (
 
-
         <motion.div
             style={{
                 scale: scaleProgress,
@@ -86,12 +85,13 @@ export default function Project({
                             translateZ="50"
                             className="row-start-4 row-span-1 col-start-1 col-span-2 mx:auto lg:row-start-2 lg:col-start-2 place-self-end mr-3 mb-3">
                             {/*<div className="flex content-end items-end">*/}
-                            <Link className="flex content-end items-end" href={githubLink} passHref target="_blank">
+                            <div className="flex content-end items-end">
                                 <FontAwesomeIcon icon={faGithub} size="2x"/>
-                            </Link>
+                            </div>
                         </CardItem>
                     </CardBody>
                 </CardContainer>
+
             </section>
             </Link>
         </motion.div>

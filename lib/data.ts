@@ -7,6 +7,9 @@ import netfitLogo from "@/public/images/netfit_logo.png"
 import calendargramLogo from "@/public/images/calendargram_logo.png"
 import snugStayLogo from "@/public/images/snugStaySystems_logo.png"
 import picamyLogo from "@/public/images/picamy_logo.png"
+import uofcLogo from "@/public/images/uofc_logo.png"
+import ciscoLogo from "@/public/images/cisco_logo.png"
+
 
 import { MdWorkOutline } from "react-icons/md";
 
@@ -46,9 +49,10 @@ export const experiencesData = [
         title: "BSc Computer Science",
         location: "Calgary, AB",
         description:
-            "Currently in my final year at the University of Calgary",
+            "Currently in my final year at the University of Calgary, studying Computer Science graduating in May 2024",
         icon: React.createElement(LuGraduationCap),
         date: "Sept 2019 - May 2024",
+        logo: uofcLogo
     },
     {
         name: "Cisco",
@@ -58,6 +62,7 @@ export const experiencesData = [
             "During my 16-month internship with the Cisco Secure Endpoint data team, I contributed to the development of high-throughput, fault-tolerant data streaming pipelines and scalable data storage solutions.",
         icon: React.createElement(MdWorkOutline),
         date: "June 2022 - Oct 2023",
+        logo: ciscoLogo
     },
 
 ] as const;

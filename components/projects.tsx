@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
+import Link from "next/link";
 
 export default function Projects() {
     const { ref } = useSectionInView("Projects", 0.1);
@@ -19,7 +20,9 @@ export default function Projects() {
             ref={ref}>
                 {firstList.map((project, index) => (
                     <React.Fragment key={index}>
-                        <Project {...project} />
+                        {/*<Link href={project.githubLink} passHref target="_blank">*/}
+                            <Project {...project} />
+                        {/*</Link>*/}
                     </React.Fragment>
                 ))}
                 {secondList.map((project, index) => (
