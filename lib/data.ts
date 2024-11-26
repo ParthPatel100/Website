@@ -9,6 +9,7 @@ import snugStayLogo from "@/public/images/snugStaySystems_logo.png"
 import picamyLogo from "@/public/images/picamy_logo.png"
 import uofcLogo from "@/public/images/uofc_logo.png"
 import ciscoLogo from "@/public/images/cisco_logo.png"
+import wsLogo from "@/public/images/wealthsimple_logo.png"
 
 
 import { MdWorkOutline } from "react-icons/md";
@@ -63,6 +64,16 @@ export const experiencesData = [
         icon: React.createElement(MdWorkOutline),
         date: "June 2022 - Oct 2023",
         logo: ciscoLogo
+    },
+    {
+        name: "Wealthsimple",
+        title: "Incoming Software Engineer Intern",
+        location: "Calgary, AB",
+        description:
+            "Incoming Software Engineer Intern on the Book of Records team",
+        icon: React.createElement(MdWorkOutline),
+        date: "Jan 2025",
+        logo: wsLogo
     },
 
 ] as const;
