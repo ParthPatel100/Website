@@ -10,6 +10,26 @@ import picamyLogo from "@/public/images/picamy_logo.png"
 import uofcLogo from "@/public/images/uofc_logo.png"
 import ciscoLogo from "@/public/images/cisco_logo.png"
 import wsLogo from "@/public/images/wealthsimple_logo.png"
+import javaScript from "@/public/skills_logo/javaScript.png"
+import typeScript from "@/public/skills_logo/typeScript.png"
+import akka from "@/public/skills_logo/akka.png"
+import aws from "@/public/skills_logo/aws.png"
+import chef from "@/public/skills_logo/chef.png"
+import docker from "@/public/skills_logo/docker.png"
+import flask from "@/public/skills_logo/flask.png"
+import git from "@/public/skills_logo/git.png"
+import java from "@/public/skills_logo/java.png"
+import kafka from "@/public/skills_logo/kafka.png"
+import nextJS from "@/public/skills_logo/nextJS.png"
+import nodeJS from "@/public/skills_logo/nodeJS.png"
+import python from "@/public/skills_logo/python.jpeg"
+import rabbitMQ from "@/public/skills_logo/rabbitMQ.png"
+import react from "@/public/skills_logo/react.png"
+import ruby from "@/public/skills_logo/ruby.jpeg"
+import scala from "@/public/skills_logo/scala.png"
+import tailwind from "@/public/skills_logo/tailwind.png"
+import flink from "@/public/skills_logo/flink.jpeg"
+
 
 
 import { MdWorkOutline } from "react-icons/md";
@@ -145,25 +165,80 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Python",
-    "Flask",
-    "Java",
-    "Scala",
-    "Akka",
-    "AWS",
-    "Ruby",
-    "Kafka",
-    "Apache Flink",
-    "Chef",
-    "Docker",
-    "RabbitMQ"
+    {
+        logo: javaScript,
+        text: "JavaScript"
+    },
+    {
+        logo: typeScript,
+        text: "TypeScript"
+    },
+    {
+        logo: react,
+        text: "React"
+    },
+    {
+        logo: nextJS,
+        text: "Next.js"
+    },
+    {
+        logo: nodeJS,
+        text: "Node.js"
+    },
+    {
+        logo: git,
+        text: "Git"
+    },
+    {
+        logo: tailwind,
+        text: "Tailwind"
+    },
+    {
+        logo: python,
+        text: "Python"
+    },
+    {
+        logo: flask,
+        text: "Flask"
+    },
+    {
+        logo: java,
+        text: "Java"
+    },
+    {
+        logo: scala,
+        text: "Scala"
+    },
+    {
+        logo: akka,
+        text: "Akka"
+    },
+    {
+        logo: aws,
+        text: "AWS"
+    },
+    {
+        logo: ruby,
+        text: "Ruby"
+    },
+    {
+        logo: kafka,
+        text: "Kafka"
+    },
+    {
+        logo: flink,
+        text: "Apache Flink"
+    },
+    {
+        logo: chef,
+        text: "Chef"
+    },
+    {
+        logo: docker,
+        text: "Docker"
+    },
+    {
+        logo: rabbitMQ,
+        text: "RabbitMQ"
+    },
 ] as const;
