@@ -87,10 +87,10 @@ export const experiencesData = [
     },
     {
         name: "Wealthsimple",
-        title: "Incoming Software Engineer Intern",
+        title: "Software Engineer Intern",
         location: "Calgary, AB",
         description:
-            "Incoming Software Engineer Intern on the Book of Records team",
+            "Software Engineer Intern on the Book of Records team",
         icon: React.createElement(MdWorkOutline),
         date: "Jan 2025",
         logo: wsLogo
