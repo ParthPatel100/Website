@@ -37,7 +37,7 @@ export default function About() {
                     <p className="text-left">
                         Hey there! I'm <span className="font-bold">Parth Patel</span>, a passionate developer, a graduate
                         from the<span className="font-bold"> University of Calgary </span> and a Software Developer intern at
-                        <span className="font-bold">Wealthsimple</span>.
+                        <span className="font-bold"> Wealthsimple</span>.
                         With a strong foundation in <span className="font-bold"> Computer Science </span> and a knack
                         for problem-solving, I thrive in the dynamic world of software development.
 
