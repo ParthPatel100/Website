@@ -35,9 +35,9 @@ export default function About() {
 
                 <div className="text-left flex flex-col gap-4">
                     <p className="text-left">
-                        Hey there! I'm <span className="font-bold">Parth Patel</span>, a passionate developer graduating
-                        from the<span className="font-bold"> University of Calgary </span>
-                        in <span className="font-bold"> May 2024. </span>
+                        Hey there! I'm <span className="font-bold">Parth Patel</span>, a passionate developer, a graduate
+                        from the<span className="font-bold"> University of Calgary </span> and a Software Developer intern at
+                        <span className="font-bold">Wealthsimple</span>.
                         With a strong foundation in <span className="font-bold"> Computer Science </span> and a knack
                         for problem-solving, I thrive in the dynamic world of software development.
 
@@ -59,7 +59,7 @@ export default function About() {
 
                         <br/>
                         <br/>
-                        As I'm getting ready to graduate from the University of Calgary in May 2024,
+
                         I'm grateful for all the experiences that have shaped me.
                         I'm excited to put my skills to good use and make a difference in the world of software
                         engineering.

@@ -70,7 +70,7 @@ export const experiencesData = [
         title: "BSc Computer Science",
         location: "Calgary, AB",
         description:
-            "Currently in my final year at the University of Calgary, studying Computer Science graduating in May 2024",
+            "Computer Science Graduate",
         icon: React.createElement(LuGraduationCap),
         date: "Sept 2019 - May 2024",
         logo: uofcLogo
