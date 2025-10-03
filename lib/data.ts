@@ -97,7 +97,7 @@ export const experiencesData = [
     },
     {
         name: "Wealthsimple",
-        title: "Software Developer Intern",
+        title: "Software Developer",
         location: "Calgary, AB",
         description:
             "Software Developer on the Securities Data team",
